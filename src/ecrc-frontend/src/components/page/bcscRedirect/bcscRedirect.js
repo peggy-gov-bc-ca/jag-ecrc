@@ -17,13 +17,13 @@ export default function BcscRedirect({ page: { header } }) {
           <h1>BC Service Card Application</h1>
           <p>
             Workers of a cannabis retail store must register with the Province.
-            Workers must also pass security screening every two years.{" "}
+            Workers must also pass security screening every two years.
           </p>
           <p>
             Cannabis retail store application and licensing fees do not cover
             worker registration costs. Workers must apply to register and are
             responsible for the cost. Licence applicants and licensees can pay
-            workers' registration costs if they wish.
+            workers&apos; registration costs if they wish.
           </p>
           <h3>
             To register as a Cannabis Worker online, you must log in with your
@@ -31,10 +31,10 @@ export default function BcscRedirect({ page: { header } }) {
           </h3>
           <p>Please select an option below:</p>
           <div className="option">
-            I’m a B.C. resident with a BC Services Card Account{" "}
+            I’m a B.C. resident with a BC Services Card Account
           </div>
           <div className="option">
-            I’m a B.C. resident but I don't have a BC Services Card Account
+            I’m a B.C. resident but I don&apos;t have a BC Services Card Account
           </div>
           <div className="option">
             I’m not a B.C. resident, send me a Cannabis Worker Registration
