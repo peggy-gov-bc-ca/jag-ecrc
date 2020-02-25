@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Header from "../../base/header/Header";
 import Footer from "../../base/footer/Footer";
-import Button from "../../base/button/Button";
+import { Button } from "../../base/button/Button";
 import SideCards from "../../composite/sideCards/SideCards";
 
 import "../page.css";
