@@ -3,12 +3,49 @@ import PropTypes from "prop-types";
 
 import Header from "../../base/header/Header";
 import Footer from "../../base/footer/Footer";
-
+import Button from "../../base/button/Button";
 import SideCards from "../../composite/sideCards/SideCards";
+
 import "../page.css";
 import "./BcscRedirect.css";
 
 export default function BcscRedirect({ page: { header } }) {
+  const loginBtn = {
+    label: "LOGIN",
+    buttonStyle: "btn ecrc_common_btn",
+    buttonSize: "btn",
+    type: "button"
+  };
+
+  const accountBtn = {
+    label: "SET UP ACCOUNT",
+    buttonStyle: "btn ecrc_common_btn",
+    buttonSize: "btn",
+    type: "button"
+  };
+
+  const requestBtn = {
+    label: "REQUEST FORM",
+    buttonStyle: "btn ecrc_common_btn",
+    buttonSize: "btn",
+    type: "button"
+  };
+
+  const onLoginClick = () => {
+    window.open("https://support.wwf.org.uk", "_blank");
+  };
+
+  const onAccountClick = () => {
+    window.open(
+      "https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card/login-with-card",
+      "_blank"
+    );
+  };
+
+  const onRequestClick = () => {
+    window.location.href = "mailto:cannabis.worker@gov.bc.ca";
+  };
+
   return (
     <main>
       <Header header={header} />
@@ -31,14 +68,44 @@ export default function BcscRedirect({ page: { header } }) {
           </h3>
           <p>Please select an option below:</p>
           <div className="option">
-            I’m a B.C. resident with a BC Services Card Account
+            <div className="row">
+              <div className="col-sm-8" style={{ marginBottom: "10px" }}>
+                I’m a B.C. resident with a BC Services Card Account.
+              </div>
+              <div className="col-sm-4">
+                <Button button={loginBtn} onClick={onLoginClick} />
+              </div>
+            </div>
           </div>
           <div className="option">
-            I’m a B.C. resident but I don&apos;t have a BC Services Card Account
+            <div className="row">
+              <div className="col-sm-8" style={{ marginBottom: "10px" }}>
+                I’m a B.C. resident but I don&apos;t have a BC Services Card
+                Account.
+              </div>
+              <div className="col-sm-4">
+                <Button
+                  button={accountBtn}
+                  onClick={onAccountClick}
+                  className="btn"
+                />
+              </div>
+            </div>
           </div>
           <div className="option">
-            I’m not a B.C. resident, send me a Cannabis Worker Registration
-            form.
+            <div className="row">
+              <div className="col-sm-8" style={{ marginBottom: "10px" }}>
+                I’m not a B.C. resident, send me a Cannabis Worker Registration
+                form.
+              </div>
+              <div className="col-sm-4">
+                <Button
+                  button={requestBtn}
+                  onClick={onRequestClick}
+                  className="btn"
+                />
+              </div>
+            </div>
           </div>
         </div>
 

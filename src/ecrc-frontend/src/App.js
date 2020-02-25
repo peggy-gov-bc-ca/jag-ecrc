@@ -5,6 +5,7 @@ import OrgVerification from "./components/page/orgVerification/OrgVerification";
 import ApplicationForm from "./components/page/applicationForm/ApplicationForm";
 import Transition from "./components/page/transition/Transition";
 import Consent from "./components/page/consent/Consent";
+import BcscRedirect from "./components/page/bcscRedirect/BcscRedirect";
 
 export default function App() {
   const [org, setOrg] = useState({});
@@ -32,6 +33,9 @@ export default function App() {
           </Route>
           <Route path="/ecrc/applicationform">
             <ApplicationForm page={page} />
+          </Route>
+          <Route path="/ecrc/bcscRedirect">
+            <BcscRedirect page={page} />
           </Route>
           <Route path="/ecrc/transition">
             <Transition header={header} />
